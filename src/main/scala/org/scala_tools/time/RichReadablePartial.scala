@@ -18,6 +18,6 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichReadablePartial(underlying: ReadablePartial) {
+class RichReadablePartial(val underlying: ReadablePartial) extends AnyVal {
   def chronology = underlying.getChronology
 }

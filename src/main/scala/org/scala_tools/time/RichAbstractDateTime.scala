@@ -20,7 +20,7 @@ import java.util.{Locale, Calendar, GregorianCalendar}
 import org.joda.time._
 import org.joda.time.base.AbstractDateTime
 
-class RichAbstractDateTime(underlying: AbstractDateTime) {
+class RichAbstractDateTime(val underlying: AbstractDateTime) extends AnyVal{
   def calendar(locale: Locale): Calendar =
     underlying.toCalendar(locale)
   def gregorianCalendar: Calendar =

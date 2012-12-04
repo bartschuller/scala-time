@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichReadableInterval(underlying: ReadableInterval) {
+class RichReadableInterval(val underlying: ReadableInterval) extends AnyVal {
   def chronology: Chronology =
     underlying.getChronology
   def end: DateTime =

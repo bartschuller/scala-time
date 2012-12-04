@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichDateMidnight(underlying: DateMidnight) {
+class RichDateMidnight(val underlying: DateMidnight) extends AnyVal{
   def -(duration: Long): DateMidnight =
     underlying.minus(duration)
   def -(duration: ReadableDuration): DateMidnight =

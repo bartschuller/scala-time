@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichDateTimeZone(underlying: DateTimeZone) {
+class RichDateTimeZone(val underlying: DateTimeZone) extends AnyVal {
   def id: String =
     underlying.getID
 }

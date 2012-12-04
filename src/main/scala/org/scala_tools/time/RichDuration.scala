@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichDuration(underlying: Duration) {
+class RichDuration(val underlying: Duration) extends AnyVal {
   def seconds: Long =
     underlying.getStandardSeconds
   def -(amount: Long): Duration =

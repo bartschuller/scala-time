@@ -19,7 +19,7 @@ package org.scala_tools.time
 import java.util.Locale
 import org.joda.time._
 
-class RichLocalTimeProperty(underlying: LocalTime.Property) {
+class RichLocalTimeProperty(val underlying: LocalTime.Property) extends AnyVal{
   def localTime: LocalTime =
     underlying.getLocalTime
   def roundFloor: LocalTime =

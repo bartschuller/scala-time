@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichInstant(underlying: Instant) {
+class RichInstant(val underlying: Instant) extends AnyVal {
   def -(duration: Long): Instant =
     underlying.minus(duration)
   def -(duration: ReadableDuration): Instant =

@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichReadablePeriod(underlying: ReadablePeriod) {
+class RichReadablePeriod(val underlying: ReadablePeriod) extends AnyVal {
   def periodType: PeriodType =
     underlying.getPeriodType
 }

@@ -19,7 +19,7 @@ package org.scala_tools.time
 import java.util.Locale
 import org.joda.time._
 
-class RichDateTimeProperty(underlying: DateTime.Property) {
+class RichDateTimeProperty(val underlying: DateTime.Property) extends AnyVal{
   def dateTime: DateTime =
     underlying.getDateTime
   def roundFloor: DateTime =

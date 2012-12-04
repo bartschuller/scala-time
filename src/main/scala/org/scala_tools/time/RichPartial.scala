@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichPartial(underlying: Partial) {
+class RichPartial(val underlying: Partial) extends AnyVal {
   def formatter = underlying.getFormatter
   
   def -(period: ReadablePeriod): Partial =

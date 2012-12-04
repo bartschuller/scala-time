@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichLong(n: Long) {
+class RichLong(val n: Long) extends AnyVal {
   def toDateTime = new DateTime(n)
   def toDuration = new Duration(n)
 }

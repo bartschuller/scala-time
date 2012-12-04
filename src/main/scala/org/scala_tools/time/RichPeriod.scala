@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichPeriod(underlying: Period) {
+class RichPeriod(val underlying: Period) extends AnyVal {
   def days: Int =
     underlying.getDays
   def hours: Int =

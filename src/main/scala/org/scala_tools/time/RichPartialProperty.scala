@@ -19,7 +19,7 @@ package org.scala_tools.time
 import java.util.Locale
 import org.joda.time._
 
-class RichPartialProperty(underlying: Partial.Property) {
+class RichPartialProperty(val underlying: Partial.Property) extends AnyVal {
   def partial: Partial =
     underlying.getPartial
 
