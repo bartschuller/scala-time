@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichReadableDuration(underlying: ReadableDuration) extends Ordered[ReadableDuration] {
+class RichReadableDuration(val underlying: ReadableDuration) extends AnyVal with Ordered[ReadableDuration] {
   def millis: Long =
     underlying.getMillis
   def compare(other: ReadableDuration): Int =

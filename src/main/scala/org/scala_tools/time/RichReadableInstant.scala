@@ -18,7 +18,7 @@ package org.scala_tools.time
 
 import org.joda.time._
 
-class RichReadableInstant(underlying: ReadableInstant) extends Ordered[ReadableInstant] {
+class RichReadableInstant(val underlying: ReadableInstant) extends AnyVal with Ordered[ReadableInstant] {
   def chronology: Chronology =
     underlying.getChronology
   def millis: Long =
