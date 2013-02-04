@@ -8,7 +8,7 @@ publishMavenStyle := true
 
 crossVersion := CrossVersion.full
 
-scalaVersion := "2.10.0-RC3"
+scalaVersion := "2.10.0"
 
 scalaBinaryVersion <<= scalaVersion
 
