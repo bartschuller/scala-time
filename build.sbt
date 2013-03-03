@@ -1,4 +1,4 @@
-organization := "org.scalaj"
+organization := "org.smop"
 
 name := "scalaj-time"
 
@@ -6,11 +6,7 @@ version := "0.7"
 
 publishMavenStyle := true
 
-crossVersion := CrossVersion.full
-
 scalaVersion := "2.10.0"
-
-scalaBinaryVersion <<= scalaVersion
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-language:implicitConversions")
 
